@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  docker-golang:
+    image: docker-golang
+    build: .
+    ports:
+      - "18888:18888"
+    volumes:
+      - .:/root
+    command: sleep infinity
