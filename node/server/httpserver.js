@@ -8,14 +8,12 @@ http.createServer((req, res) => {
       body.push(chunk)
     })
     .on('end', () => {
-      // console.log(req.)
       console.log(req.method + ' ' + req.url + ' HTTP/' + req.httpVersion);
-      
-      for (prop in req.headers) {
+      for (const [name, value] of Object.entries(req.headers)) {
         console.log(
-          prop.charAt(0).toUpperCase() + 
-          prop.slice(1) + 
-          ': ' + req.headers[prop]
+          name.charAt(0).toUpperCase() + 
+          name.slice(1) + 
+          ': ' + value
         );
       }
       console.log(body.join('\n'))
@@ -24,7 +22,7 @@ http.createServer((req, res) => {
     })
 
   res.writeHead(200)
-  res.write("<html><body><h1>Hello, world!</h1>")
+  res.write("<html><body><h1>I'm HTTP Server with NodeJS!</h1>")
   res.end()
 })
 .listen(18888)

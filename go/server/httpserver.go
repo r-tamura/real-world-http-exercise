@@ -14,7 +14,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Println(string(dump))
-	fmt.Fprintf(w, "<html><body>Hello, World!\n")
+	fmt.Fprintf(w, "<html><body><h1>I'm HTTP Server with Go Lang!</h1>\n")
 }
 
 func cookieHandler(w http.ResponseWriter, r *http.Request) {
@@ -29,7 +29,7 @@ func cookieHandler(w http.ResponseWriter, r *http.Request) {
 		Value: "abcdefg",
 	})
 
-	fmt.Fprintf(w, "<html><body>Hello, World!\n")
+	fmt.Fprintf(w, "<html><body><h1>I'm HTTP Server with Go Lang!</h1>\n")
 }
 
 func main() {
