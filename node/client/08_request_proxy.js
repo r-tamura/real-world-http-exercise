@@ -28,8 +28,7 @@ function loggingResponse(res) {
 const jar = request.jar()
 
 request
-  .get({ url:'http://localhost:18888/cookie', jar })
+  .get({ url:'https://github.com', proxy: 'http://localhost:8080' })
   .on('response', res => {
     loggingResponse(res)
-    request.get({ url:'http://localhost:18888/cookie', jar })
   })

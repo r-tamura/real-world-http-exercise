@@ -10,6 +10,7 @@ import (
 /*
  * Proxy server with "goproxy"
  *
+ * [Installation library]
  * go get github.com/elazarl/goproxy
  */
 func main() {
