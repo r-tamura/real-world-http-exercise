@@ -82,3 +82,7 @@ typings/
 
 .bash_history
 .config
+
+*.crt
+*.key
+openssl.cnf
